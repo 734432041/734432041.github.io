@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://734432041.github.io/"/>
-  <updated>2018-06-11T09:40:07.356Z</updated>
+  <updated>2018-06-11T09:42:52.168Z</updated>
   <id>https://734432041.github.io/</id>
   
   <author>
@@ -21,16 +21,16 @@
     <link href="https://734432041.github.io/2018/06/11/hexo%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%88%B0%E5%8F%A6%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91/"/>
     <id>https://734432041.github.io/2018/06/11/hexo博客迁移到另一台电脑/</id>
     <published>2018-06-11T09:28:22.000Z</published>
-    <updated>2018-06-11T09:40:07.356Z</updated>
+    <updated>2018-06-11T09:42:52.168Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="拷贝原来电脑上hexo目录的一下文件"><a href="#拷贝原来电脑上hexo目录的一下文件" class="headerlink" title="拷贝原来电脑上hexo目录的一下文件"></a>拷贝原来电脑上hexo目录的一下文件</h1><ul><li>config.yml</li><li>package.json</li><li>scaffolds/</li><li>source/</li><li>themes/<h1 id="在新电脑上安装node-js"><a href="#在新电脑上安装node-js" class="headerlink" title="在新电脑上安装node.js"></a>在新电脑上安装node.js</h1><a href="http://nodejs.cn/download/" target="_blank" rel="noopener">Node.js</a> <h1 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h1><a href="https://gitforwindows.org/" target="_blank" rel="noopener">git</a><h1 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h1><code>npm install -g hexo</code><h1 id="在hexo目录下执行以下命令"><a href="#在hexo目录下执行以下命令" class="headerlink" title="在hexo目录下执行以下命令"></a>在hexo目录下执行以下命令</h1></li></ul><p><code>npm install</code><br><code>npm install hexo-deployer-git –save</code><br><code>npm install hexo-generator-feed –save</code><br><code>npm install hexo-generator-sitemap –save</code></p><h1 id="填写git信息"><a href="#填写git信息" class="headerlink" title="填写git信息"></a>填写git信息</h1><p><code>git config --global user.email &quot;you@example.com&quot;</code><br><code>git config --global user.name &quot;Your Name&quot;</code><br><img src="/2018/06/11/hexo博客迁移到另一台电脑/Snipaste_2018-06-10_23-45-26.png" alt=""></p><h1 id="填写你的GitHub账号"><a href="#填写你的GitHub账号" class="headerlink" title="填写你的GitHub账号"></a>填写你的GitHub账号</h1><p><img src="/2018/06/11/hexo博客迁移到另一台电脑/Snipaste_2018-06-10_23-46-21.png" alt=""></p><h1 id="部署到远端"><a href="#部署到远端" class="headerlink" title="部署到远端"></a>部署到远端</h1><p><code>hexo g</code><br><code>hexo s</code></p><h1 id="成功"><a href="#成功" class="headerlink" title="成功"></a>成功</h1><p><img src="/2018/06/11/hexo博客迁移到另一台电脑/a269e2a43bb35529872a3d52f8a11805899217be40780-cvfXDk_fw658.jpg" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<a id="more"></a><h1 id="拷贝原来电脑上hexo目录的一下文件"><a href="#拷贝原来电脑上hexo目录的一下文件" class="headerlink" title="拷贝原来电脑上hexo目录的一下文件"></a>拷贝原来电脑上hexo目录的一下文件</h1><ul><li>config.yml</li><li>package.json</li><li>scaffolds/</li><li>source/</li><li>themes/<h1 id="在新电脑上安装node-js"><a href="#在新电脑上安装node-js" class="headerlink" title="在新电脑上安装node.js"></a>在新电脑上安装node.js</h1><a href="http://nodejs.cn/download/" target="_blank" rel="noopener">Node.js</a> <h1 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h1><a href="https://gitforwindows.org/" target="_blank" rel="noopener">git</a><h1 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h1><code>npm install -g hexo</code><h1 id="在hexo目录下执行以下命令"><a href="#在hexo目录下执行以下命令" class="headerlink" title="在hexo目录下执行以下命令"></a>在hexo目录下执行以下命令</h1></li></ul><p><code>npm install</code><br><code>npm install hexo-deployer-git –save</code><br><code>npm install hexo-generator-feed –save</code><br><code>npm install hexo-generator-sitemap –save</code></p><h1 id="填写git信息"><a href="#填写git信息" class="headerlink" title="填写git信息"></a>填写git信息</h1><p><code>git config --global user.email &quot;you@example.com&quot;</code><br><code>git config --global user.name &quot;Your Name&quot;</code><br><img src="/2018/06/11/hexo博客迁移到另一台电脑/Snipaste_2018-06-10_23-45-26.png" alt=""></p><h1 id="填写你的GitHub账号"><a href="#填写你的GitHub账号" class="headerlink" title="填写你的GitHub账号"></a>填写你的GitHub账号</h1><p><img src="/2018/06/11/hexo博客迁移到另一台电脑/Snipaste_2018-06-10_23-46-21.png" alt=""></p><h1 id="部署到远端"><a href="#部署到远端" class="headerlink" title="部署到远端"></a>部署到远端</h1><p><code>hexo g</code><br><code>hexo s</code></p><h1 id="成功"><a href="#成功" class="headerlink" title="成功"></a>成功</h1><p><img src="/2018/06/11/hexo博客迁移到另一台电脑/a269e2a43bb35529872a3d52f8a11805899217be40780-cvfXDk_fw658.jpg" alt=""></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;拷贝原来电脑上hexo目录的一下文件&quot;&gt;&lt;a href=&quot;#拷贝原来电脑上hexo目录的一下文件&quot; class=&quot;headerlink&quot; title=&quot;拷贝原来电脑上hexo目录的一下文件&quot;&gt;&lt;/a&gt;拷贝原来电脑上hexo目录的一下文件&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;拷贝原来电脑上hexo目录的一下文件&quot;&gt;&lt;a href=&quot;#拷贝原来电脑上hexo目录的一下文件&quot; class=&quot;headerlink&quot; title=&quot;拷贝原来电脑上hexo目录的一下文件&quot;&gt;&lt;/a&gt;拷贝原来电脑上hexo目录的
       
     
     </summary>
@@ -41,35 +41,6 @@
       <category term="hexo" scheme="https://734432041.github.io/tags/hexo/"/>
     
       <category term="博客" scheme="https://734432041.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>『小白日记』使用python对csv进行操作</title>
-    <link href="https://734432041.github.io/2018/06/09/%E3%80%8E%E5%B0%8F%E7%99%BD%E6%97%A5%E8%AE%B0%E3%80%8F%E4%BD%BF%E7%94%A8python%E5%AF%B9csv%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C/"/>
-    <id>https://734432041.github.io/2018/06/09/『小白日记』使用python对csv进行操作/</id>
-    <published>2018-06-09T02:39:23.000Z</published>
-    <updated>2018-06-09T02:42:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Python-使用python对csv文件操作"><a href="#Python-使用python对csv文件操作" class="headerlink" title="Python 使用python对csv文件操作"></a>Python 使用python对csv文件操作</h1>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Python-使用python对csv文件操作&quot;&gt;&lt;a href=&quot;#Python-使用python对csv文件操作&quot; class=&quot;headerlink&quot; title=&quot;Python 使用python对csv文件操作&quot;&gt;&lt;/a&gt;Python 使用python对c
-      
-    
-    </summary>
-    
-      <category term="python" scheme="https://734432041.github.io/categories/python/"/>
-    
-    
-      <category term="学习笔记" scheme="https://734432041.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="python" scheme="https://734432041.github.io/tags/python/"/>
-    
-      <category term="csv" scheme="https://734432041.github.io/tags/csv/"/>
     
   </entry>
   
