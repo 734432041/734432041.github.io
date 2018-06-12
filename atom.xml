@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://734432041.github.io/"/>
-  <updated>2018-06-11T11:04:06.094Z</updated>
+  <updated>2018-06-12T05:30:53.254Z</updated>
   <id>https://734432041.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>『小白日记』lambda学习笔记</title>
+    <link href="https://734432041.github.io/2018/06/12/%E3%80%8E%E5%B0%8F%E7%99%BD%E6%97%A5%E8%AE%B0%E3%80%8Flambda%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://734432041.github.io/2018/06/12/『小白日记』lambda学习笔记/</id>
+    <published>2018-06-12T05:23:23.000Z</published>
+    <updated>2018-06-12T05:30:53.254Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Lambda的学习笔记"><a href="#Lambda的学习笔记" class="headerlink" title="Lambda的学习笔记"></a>Lambda的学习笔记</h1><a id="more"></a><h2 id="lambda函数，也是匿名函数，即一个没有名字的函数"><a href="#lambda函数，也是匿名函数，即一个没有名字的函数" class="headerlink" title="lambda函数，也是匿名函数，即一个没有名字的函数"></a>lambda函数，也是匿名函数，即一个没有名字的函数</h2><h3 id="例子："><a href="#例子：" class="headerlink" title="例子："></a>例子：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fun = <span class="keyword">lambda</span> x:x**<span class="number">2</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    print(fun(i))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pow</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x**<span class="number">2</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    print(pow(i))</span><br></pre></td></tr></table></figure><p>这里，<code>fun</code>是<code>lambda</code>定义的一个表达式，<code>x</code>是匿名参数入口参数，<code>x+1</code>是匿名函数的函数体。使用<code>lambda</code>可以是代码更清楚。</p><h2 id="Lambda语法实际上是构建了一个函数对象"><a href="#Lambda语法实际上是构建了一个函数对象" class="headerlink" title="Lambda语法实际上是构建了一个函数对象"></a>Lambda语法实际上是构建了一个函数对象</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fun = <span class="keyword">lambda</span> x:x**<span class="number">2</span></span><br><span class="line"></span><br><span class="line">print(fun)</span><br><span class="line"><span class="comment">#输出结果：&lt;function &lt;lambda&gt; at 0x0000017CE2E6D6A8&gt;</span></span><br></pre></td></tr></table></figure><h2 id="Python中三个定义好的全局函数"><a href="#Python中三个定义好的全局函数" class="headerlink" title="Python中三个定义好的全局函数"></a>Python中三个定义好的全局函数</h2><ul><li><p>Filter:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(list(filter(<span class="keyword">lambda</span> x:x%<span class="number">3</span>==<span class="number">0</span> , test1)))</span><br><span class="line"><span class="comment">#[0, 3, 6, 9]</span></span><br><span class="line">print([x <span class="keyword">for</span> x <span class="keyword">in</span> test1 <span class="keyword">if</span> x%<span class="number">3</span>==<span class="number">0</span>])</span><br><span class="line"><span class="comment">#[0, 3, 6, 9]</span></span><br></pre></td></tr></table></figure></li><li><p>Map</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(list(map(<span class="keyword">lambda</span> x:x**<span class="number">2</span>+<span class="number">10</span> , test1)))</span><br><span class="line"><span class="comment">#[10, 11, 14, 19, 26, 35, 46, 59, 74, 91]</span></span><br><span class="line">print([x**<span class="number">2</span>+<span class="number">10</span> <span class="keyword">for</span> x <span class="keyword">in</span> test1])</span><br><span class="line"><span class="comment">#[10, 11, 14, 19, 26, 35, 46, 59, 74, 91]</span></span><br></pre></td></tr></table></figure></li><li><p>Reduce<br><code>reduce()</code> 函数会对参数序列中元素进行累积。</p></li></ul><p>函数将一个数据集合（链表，元组等）中的所有数据进行下列操作：用传给 <code>reduce</code> 中的函数 <code>function</code>（有两个参数）先对集合中的第 1、2 个元素进行操作，得到的结果再与第三个数据用 <code>function</code> 函数运算，最后得到一个结果。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line">print(reduce(<span class="keyword">lambda</span> x,y:x+y,test1))</span><br><span class="line"><span class="comment">#输出结果：45</span></span><br></pre></td></tr></table></figure></p><p><img src="/2018/06/12/『小白日记』lambda学习笔记/f3a795011b6d40790106be979fc759335f0c1a0a4cf5-eqFXCt_fw658.jpg" alt="安装"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Lambda的学习笔记&quot;&gt;&lt;a href=&quot;#Lambda的学习笔记&quot; class=&quot;headerlink&quot; title=&quot;Lambda的学习笔记&quot;&gt;&lt;/a&gt;Lambda的学习笔记&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="python" scheme="https://734432041.github.io/categories/python/"/>
+    
+    
+      <category term="学习笔记" scheme="https://734432041.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="python" scheme="https://734432041.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo博客迁移到另一台电脑</title>
