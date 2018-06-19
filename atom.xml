@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://734432041.github.io/"/>
-  <updated>2018-06-12T08:47:35.023Z</updated>
+  <updated>2018-06-19T09:41:24.799Z</updated>
   <id>https://734432041.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>操作系统复习</title>
+    <link href="https://734432041.github.io/2018/06/19/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0/"/>
+    <id>https://734432041.github.io/2018/06/19/操作系统复习/</id>
+    <published>2018-06-19T09:39:23.000Z</published>
+    <updated>2018-06-19T09:41:24.799Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="2018年春季学期计算机操作系统原理复习提纲"><a href="#2018年春季学期计算机操作系统原理复习提纲" class="headerlink" title="2018年春季学期计算机操作系统原理复习提纲"></a>2018年春季学期计算机操作系统原理复习提纲</h1><p>（包括基本概念、管理原理、计算和综合应用）</p><a id="more"></a><h2 id="Part-I操作系统概述"><a href="#Part-I操作系统概述" class="headerlink" title="Part I操作系统概述"></a>Part I操作系统概述</h2><h3 id="操作系统的资源管理技术"><a href="#操作系统的资源管理技术" class="headerlink" title="操作系统的资源管理技术"></a>操作系统的资源管理技术</h3><h4 id="复用"><a href="#复用" class="headerlink" title="复用"></a>复用</h4><ol><li><p>空分复用共享  </p><blockquote><p>将资源的不同单位同时分配给不同的进程。  </p><ul><li>内存可以存分若干个进程</li><li>外存（磁盘）同时为多个进程保存信息</li></ul></blockquote></li><li><p>时分复用共享  </p><blockquote><p>轮流的使用资源，每个进程获得资源后使用一小会，多个进程分时地共享这类资源</p><ul><li>独占<br>进程获得资源后使用一个完整的周期后才会释放（磁带机）</li><li>时分共享<br>进程获得资源后可能随时被剥夺，被另一个进程抢占（处理器）</li></ul><ol start="2"><li>虚拟<br>解决物理资源数量不足，提高服务的能力和水平  <blockquote><p>一个物理资源虚拟成多个逻辑上的对应物  </p><pre><code>多个物理资源虚拟成单个逻辑上的对应物 </code></pre></blockquote></li><li>抽象<br>处理系统的复杂性，解决资源的易用性 </li></ol></blockquote><h3 id="操作系统的作用"><a href="#操作系统的作用" class="headerlink" title="操作系统的作用"></a>操作系统的作用</h3><blockquote><p>管理系统资源、控制程序执行、改善人机界面、提供各种服务，并合理组织计算机工作流程和为用户方便有效地使用计算机提供良好运行环境的一种系统软件</p></blockquote></li></ol><ul><li>服务用户观点————操作系统作为用户接口和公共服务程序</li><li>进程交互观点————操作系统作为进程执行的控制者和协调者</li><li>系统实现观点————操作系统作为扩展机或虚拟机</li><li>资源管理观点————操作系统作为资源的管理者和控制者<h3 id="操作系统的主要特性"><a href="#操作系统的主要特性" class="headerlink" title="操作系统的主要特性"></a>操作系统的主要特性</h3></li><li>并发性<br>两个或两个以上的活动或事件在同一时间间隔内发生 </li><li>异步性(随机性)<br>多道程序中允许多个程序并发执行，并发活动会导致随机事件的发生，由于资源有限而程序众多，每个程序的执行并不是连贯的</li><li>共享性<br>计算机系统中的资源可以被多个并发执行的程序共同使用，而不是被某个程序独占<h3 id="操作系统的发展与分类"><a href="#操作系统的发展与分类" class="headerlink" title="操作系统的发展与分类"></a>操作系统的发展与分类</h3>（单道/多道批处理操作系统、分时操作系统、实时操作系统的基本特点）<h4 id="批处理操作系统"><a href="#批处理操作系统" class="headerlink" title="批处理操作系统"></a>批处理操作系统</h4>根据预先设定的调度策略选择若干作业并发的执行，系统资源利用率高，作业吞吐量大。</li><li>批量集中处理</li><li>多道程序运行</li><li>作业脱机工作<h4 id="分时操作系统"><a href="#分时操作系统" class="headerlink" title="分时操作系统"></a>分时操作系统</h4></li><li>同时性<br>若干终端用户联机使用计算机</li><li>独立性<br>终端用户彼此独立，互不干扰</li><li>即时性<br>请求在短时间内得到响应 </li><li>交互性<br>用户和机器交互，便于调试和排错 <h4 id="实时操作系统"><a href="#实时操作系统" class="headerlink" title="实时操作系统"></a>实时操作系统</h4><h3 id="操作系统提供给用户的几种接口"><a href="#操作系统提供给用户的几种接口" class="headerlink" title="操作系统提供给用户的几种接口"></a>操作系统提供给用户的几种接口</h3></li></ul><ol><li>程序接口<br>操作系统对外提供服务和功能的手段，由系统调用组成。 </li><li>操作接口<br>由一组控制命令或作业控制语言组成，是操作系统为用户提供的组织和控制其作业（应用程序）执行的手段 <h3 id="什么是系统调用-API、库函数和系统调用之间的区别和联系"><a href="#什么是系统调用-API、库函数和系统调用之间的区别和联系" class="headerlink" title="什么是系统调用? API、库函数和系统调用之间的区别和联系"></a>什么是系统调用? API、库函数和系统调用之间的区别和联系</h3></li></ol><ul><li>系统调用<blockquote><p>系统调用，指运行在用户空间的应用程序向操作系统内核请求某些服务的调用过程。<br>是<code>应用程序</code>同<code>系统</code>之间的接口。</p></blockquote></li><li>库函数<blockquote><p>库函数，是由用户或组织自己开发的，具有一定功能的函数集合。 </p></blockquote></li><li>API<blockquote><p>API（应用程序编程接口）是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。  </p></blockquote><h4 id="系统调用与函数调用之间的区别"><a href="#系统调用与函数调用之间的区别" class="headerlink" title="系统调用与函数调用之间的区别"></a>系统调用与函数调用之间的区别</h4></li></ul><ol><li>调用的形式和实现方式不同</li><li>被调用代码的位置不同</li><li>提供方式不同<h3 id="什么是原语？用户应用程序如何调用原语功能？举例Linux原语"><a href="#什么是原语？用户应用程序如何调用原语功能？举例Linux原语" class="headerlink" title="什么是原语？用户应用程序如何调用原语功能？举例Linux原语"></a>什么是原语？用户应用程序如何调用原语功能？举例Linux原语</h3><h4 id="原语"><a href="#原语" class="headerlink" title="原语"></a>原语</h4>原语是由若干机器指令构成，用于完成某种特定的系统功能的一段程序，具有不可分割性，即原语的执行必须是连续的，不可被打断的。</li></ol><h3 id="第一章课后计算题"><a href="#第一章课后计算题" class="headerlink" title="第一章课后计算题"></a>第一章课后计算题</h3><h2 id="Part-II处理器管理"><a href="#Part-II处理器管理" class="headerlink" title="Part II处理器管理"></a>Part II处理器管理</h2><ol><li>CPU的两种工作状态</li><li>中断和异常</li><li>进程与程序、进程与线程之间的区别联系</li><li>父进程与子进程之间的关系</li><li>进程的3态模型、进程的5态模型、引发各种状态转换的原因</li><li>操作系统的三级调度</li><li>常用的作业调度算法、进程调度算法</li><li>第二章课后作业调度、进程调度有关的计算题</li></ol><h2 id="PartIII同步、通信与死锁"><a href="#PartIII同步、通信与死锁" class="headerlink" title="PartIII同步、通信与死锁"></a>PartIII同步、通信与死锁</h2><ol><li>进程并发的概念；互斥、同步的概念</li><li>并发进程共享临界资源，分析如果不加控制，可能会出现的不确定的结果</li><li>分析利用软件方法解决互斥问题的漏洞（分析Dekker的几次尝试）</li><li>应用信号量机制（PV操作）解决进程同步互斥问题<br>（课件例题、练习题、作业题）<br>生产者-消费者类型、读者-写者类型、理发师类型、<br>哲学家就餐类型、进程DAG图类型</li><li>父子进程之间进行通信的几种方式（结合实验课程）</li><li>死锁的基本概念、死锁产生的原因、4个必要条件</li><li>死锁预防、死锁避免、死锁检测的概念</li><li>银行家算法、安全序列，使用安全算法和银行家算法解决问题</li><li>第三章课后应用题和计算题</li></ol><h2 id="PartIV存储管理"><a href="#PartIV存储管理" class="headerlink" title="PartIV存储管理"></a>PartIV存储管理</h2><ol><li>静态地址重定位和动态地址重定位</li><li>动态多分区存储管理的管理机制（数据结构、主存分配算法、回收算法、地址重定位）</li><li>内存不足的存储管理技术</li><li>分页式存储管理的管理机制（基本分页、请求分页）</li><li>基本分页式（包括两级页表机制、多级页表机制）地址字结构的有关计算、请求分页式存储管理的虚实地址之间的重定位及地址计算</li><li>基本分页存储管理的平均访存时间计算（使用快表）、<br>请求分页存储管理的平均访存时间计算</li><li>缺页从哪儿调入？调入时间分析</li><li>5种页面置换算法的原理和应用</li><li>第四章课后计算题和应用题</li></ol><h2 id="PartV设备管理与文件管理"><a href="#PartV设备管理与文件管理" class="headerlink" title="PartV设备管理与文件管理"></a>PartV设备管理与文件管理</h2><ol><li>设备独立性</li><li>缓冲区设置的目的、设置方法、计算</li><li>Unix的缓冲池管理机制</li><li>进行一次磁盘读写所需要的时间的计算</li><li>4种磁盘调度算法原理及计算</li><li>用户程序发出磁盘I/O请求后，系统一般的处理流程</li><li>文件的4种物理存储结构</li><li>文件目录、文件的索引节点</li><li>多级混合索引存储结构所允许的文件长度计算</li><li>Unix、Linux空闲盘块成组链接组织方式</li><li>第五、六章课后计算题和应用题</li></ol><p>总：回顾整个操作系统各个功能模块的功能及功能实现有关的数据结构和算法</p><pre><code>按照复习提纲，结合课本、课件、课堂例题、课后作业题进行复习，特别是各章节授课过程中讲过的例题和各章习题，必须掌握其解题思路和方法。</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;2018年春季学期计算机操作系统原理复习提纲&quot;&gt;&lt;a href=&quot;#2018年春季学期计算机操作系统原理复习提纲&quot; class=&quot;headerlink&quot; title=&quot;2018年春季学期计算机操作系统原理复习提纲&quot;&gt;&lt;/a&gt;2018年春季学期计算机操作系统原理复习提纲&lt;/h1&gt;&lt;p&gt;（包括基本概念、管理原理、计算和综合应用）&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="复习" scheme="https://734432041.github.io/categories/%E5%A4%8D%E4%B9%A0/"/>
+    
+    
+      <category term="复习" scheme="https://734432041.github.io/tags/%E5%A4%8D%E4%B9%A0/"/>
+    
+      <category term="操作系统" scheme="https://734432041.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>『小白日记』join函数学习笔记</title>
@@ -126,7 +150,7 @@
     <link href="https://734432041.github.io/2018/06/04/%E3%80%8E%E5%B0%8F%E7%99%BD%E6%97%A5%E8%AE%B0%E3%80%8Fitchat%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <id>https://734432041.github.io/2018/06/04/『小白日记』itchat库学习笔记（一）/</id>
     <published>2018-06-04T15:21:19.000Z</published>
-    <updated>2018-06-08T15:18:42.000Z</updated>
+    <updated>2018-06-19T09:39:52.950Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Python-itchar库的学习笔记（一）"><a href="#Python-itchar库的学习笔记（一）" class="headerlink" title="Python itchar库的学习笔记（一）"></a>Python itchar库的学习笔记（一）</h1><p><a href="http://itchat.readthedocs.io/zh/latest/" target="_blank" rel="noopener">itchat文档</a></p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>Pip install itchat  </p><p><img src="/2018/06/04/『小白日记』itchat库学习笔记（一）/安装.png" alt="安装"></p><a id="more"></a><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="登录微信"><a href="#登录微信" class="headerlink" title="登录微信"></a>登录微信</h3><p><code>Itchat.auto_login()</code>，使用这种方式不会保持登录状态，也就是说，下次还需要重新扫描二维码，可以加上hotReload=True 参数使得保持登录状态，该参数产生一个静态文件<code>itchat.pkl</code> 存储登录状态。  </p><p><img src="/2018/06/04/『小白日记』itchat库学习笔记（一）/login.png" alt="安装"></p><h3 id="登录成功"><a href="#登录成功" class="headerlink" title="登录成功"></a>登录成功</h3><p><img src="/2018/06/04/『小白日记』itchat库学习笔记（一）/登陆成功.png" alt="安装"></p><h3 id="登出"><a href="#登出" class="headerlink" title="登出"></a>登出</h3><p><img src="/2018/06/04/『小白日记』itchat库学习笔记（一）/登出.png" alt="安装"></p><h3 id="发送消息"><a href="#发送消息" class="headerlink" title="发送消息"></a>发送消息</h3><p><code>Send(msg=”Text Message”,toUserName)</code>  </p><h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><ul><li>Msg：要发送的信息</li><li>发送文件：msg=‘@fil@path_to_file’</li><li>发生图片：msg=’@img@path_to_img’</li><li>发送视频：msg=’@vid@path_to_vid’</li><li>toUserName：发送对象，默认为自己</li><li>返回值： True|False</li></ul><h3 id="注册消息方法"><a href="#注册消息方法" class="headerlink" title="注册消息方法"></a>注册消息方法</h3><p>如果itchat接收到没有注册的消息，消息就会被自动舍弃，但是我们可以自己动态注册消息。  </p><h3 id="自动回复好友实例"><a href="#自动回复好友实例" class="headerlink" title="自动回复好友实例"></a>自动回复好友实例</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> itchat</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">from</span> itchat.content <span class="keyword">import</span> *</span><br><span class="line"><span class="meta">@itchat.msg_register(TEXT,isGroupChat = False)      #表示接受消息时自动执行此函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">reply</span><span class="params">(msg)</span>:</span></span><br><span class="line">    msg_content = msg[<span class="string">'Text'</span>]</span><br><span class="line">    itchat.send(<span class="string">"已收到了消息：&#123;&#125;"</span>.format(msg_content),toUserName=msg[<span class="string">'FromUserName'</span>])</span><br><span class="line">    localtime = datetime.datetime.now()</span><br><span class="line">    now_time_str = localtime.strftime(<span class="string">'%Y-%m-%d %H:%M:%S'</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"接收时间为：&#123;&#125;，请耐心等待我的回复"</span>.format(now_time_str)</span><br><span class="line"></span><br><span class="line">itchat.auto_login(hotReload=<span class="keyword">True</span>)</span><br><span class="line">itchat.run()</span><br></pre></td></tr></table></figure><p><img src="/2018/06/04/『小白日记』itchat库学习笔记（一）/7e56992740978acf4c23e71353df38e1e8ea9327277f8-g62vLO_fw658.jpg" alt=""></p>]]></content>
     
@@ -137,6 +161,8 @@
 &lt;p&gt;&lt;img src=&quot;/2018/06/04/『小白日记』itchat库学习笔记（一）/安装.png&quot; alt=&quot;安装&quot;&gt;&lt;/p&gt;
     
     </summary>
+    
+      <category term="python" scheme="https://734432041.github.io/categories/python/"/>
     
     
       <category term="学习笔记" scheme="https://734432041.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
