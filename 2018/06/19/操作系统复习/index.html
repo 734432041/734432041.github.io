@@ -177,7 +177,7 @@
 <meta property="og:image" content="https://734432041.github.io/2018/06/19/操作系统复习/图片14.jpg">
 <meta property="og:image" content="https://734432041.github.io/2018/06/19/操作系统复习/图片15.jpg">
 <meta property="og:image" content="https://734432041.github.io/2018/06/19/操作系统复习/图片16.jpg">
-<meta property="og:updated_time" content="2018-07-02T02:26:01.389Z">
+<meta property="og:updated_time" content="2018-07-02T10:30:30.429Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="操作系统复习">
 <meta name="twitter:description" content="2018年春季学期计算机操作系统原理复习提纲（包括基本概念、管理原理、计算和综合应用）">
@@ -450,7 +450,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-07-02 10:26:01" itemprop="dateModified" datetime="2018-07-02T10:26:01+08:00">2018-07-02</time>
+                <time title="修改时间：2018-07-02 18:30:30" itemprop="dateModified" datetime="2018-07-02T18:30:30+08:00">2018-07-02</time>
               
             
           </span>
@@ -467,7 +467,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/复习/" itemprop="url" rel="index"><span itemprop="name">复习</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/复习总结/" itemprop="url" rel="index"><span itemprop="name">复习总结</span></a></span>
 
                 
                 
@@ -851,13 +851,13 @@
 <h4 id="请求分页存储管理的平均访问时间"><a href="#请求分页存储管理的平均访问时间" class="headerlink" title="请求分页存储管理的平均访问时间"></a>请求分页存储管理的平均访问时间</h4><p>设t1位访问一次快表的时间，t2为一次内存访问的时间，t3为缺页处理的时间</p>
 <h5 id="不考虑快表命中率和缺页中断时"><a href="#不考虑快表命中率和缺页中断时" class="headerlink" title="不考虑快表命中率和缺页中断时"></a>不考虑快表命中率和缺页中断时</h5><ol>
 <li>访问的页面在快表中（一定在内存中）:<br> 查找快表的时间+访问内存的时间<br> <code>t = t1 + t2</code></li>
-<li>访问的页面在主存中（不发生缺页中断）:<br> 查找快表的时间+查找页表的时间+修改快表的时间+访问内存的时间<br> <code>t = t1 + t2 + t1 + t2</code></li>
-<li>访问的页面不在主存中（发生缺页中断）：<br> 查找快表的时间+查找页表的时间+中断处理的时间（包括修改快表和页表）+查找快表的时间+访问内存的时间<br> <code>t = t1 + t2 + t3 + t1 + t2</code><h5 id="考虑快表命中率和缺页中断时"><a href="#考虑快表命中率和缺页中断时" class="headerlink" title="考虑快表命中率和缺页中断时"></a>考虑快表命中率和缺页中断时</h5>设快表命中为m，缺页中断率为n<br><code>t = t1 + m * t2 + (1−m)[t2 + n * (t3 + t1 + t2) + (1 − n)(t1 + t2)]</code></li>
+<li>访问的页面在主存中（不发生缺页中断）:<br> 查找快表的时间+查找页表的时间+访问内存的时间<br> <code>t = t1 + t2 + t2</code></li>
+<li>访问的页面不在主存中（发生缺页中断）：<br> 查找快表的时间+查找页表的时间+中断处理的时间（包括修改快表和页表）+查找快表的时间+访问内存的时间<br> <code>t = t1 + t2 + t3 + t1 + t2</code><h5 id="考虑快表命中率和缺页中断时"><a href="#考虑快表命中率和缺页中断时" class="headerlink" title="考虑快表命中率和缺页中断时"></a>考虑快表命中率和缺页中断时</h5>设快表命中为m，缺页中断率为n<br><code>t = m*(t1 + t2) + (1 - m)*[(1 - n)*(t1 + 2*t2) + n*(2*t1 + 2*t2 + t3)]</code></li>
 </ol>
 <h3 id="缺页从哪儿调入？调入时间分析"><a href="#缺页从哪儿调入？调入时间分析" class="headerlink" title="缺页从哪儿调入？调入时间分析"></a>缺页从哪儿调入？调入时间分析</h3><h3 id="5种页面置换算法的原理和应用"><a href="#5种页面置换算法的原理和应用" class="headerlink" title="5种页面置换算法的原理和应用"></a>5种页面置换算法的原理和应用</h3><ol>
 <li>最佳页面替换算法（OPT）<br> 选择置换下次访问距当前时间最长的那些页。但是程序是不可预知的，所以这种算法是不可实现的，但是可用来衡量其他的各种算法</li>
 <li>先进先出页面替换算法（FIFO）<br> 置换驻留在内存中时间最长的页<br> 思想：一个很久以前取入内存的页，到现在可能已经不会再用到了。<br> 问题：经常出现一部分程序或数据在整个程序的生命周期中使用频率都很高的情况。</li>
-<li>最近最久未用的页面替换算法（LRU）<br> 置换内存中上次使用距当前最远的页。根据程序局部性原理，在较长时间里未被使用的页面，可能不会马上使用到。<br> 性能接近于<code>OPT</code>，但比较难以实现。<br> 为每一页添加一个最后一次访问的时间戳，并且必须在每次访问内存时，都要更新时间戳。<br> 维护一个关于访问页的栈。</li>
+<li>最近最久未用的页面替换算法（LRU）<br> 置换内存中上次使用距当前最远的页。根据程序局部性原理，在较长时间里未被使用的页面，可能不会马上使用到。<br> 为每一页添加一个最后一次访问的时间戳，并且必须在每次访问内存时，都要更新时间戳。<br> 维护一个关于访问页的栈。</li>
 <li>时钟Clock算法  <ol>
 <li>简单的时钟替换算法<ul>
 <li>当页面首次被置入时，其<code>引用位</code>置0</li>
@@ -865,7 +865,7 @@
 <li>当需要进行页面置换时，扫描以查找<code>引用位</code>为0的页框，当遇到<code>引用位</code>为1的页框，就将它的<code>引用位</code>置0，并跳过这个页面，当遇到<code>引用位</code>为0的页框，就把它置换。</li>
 <li>如果扫描一圈都没有完成置换，指针会停留在起始位置，此时，就把起始位置的页面置换出去。</li>
 </ul>
-<ol start="2">
+<ol>
 <li>时钟策略改进法<br>（把<code>引用位</code>和<code>修改位</code>结合起来使用）</li>
 </ol>
 <ul>
