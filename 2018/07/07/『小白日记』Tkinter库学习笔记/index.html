@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|true:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=6.3.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Tkinter库学习笔记">
+<meta name="keywords" content="python,学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="『小白日记』Tkinter库学习笔记">
+<meta property="og:url" content="https://734432041.github.io/2018/07/07/『小白日记』Tkinter库学习笔记/index.html">
+<meta property="og:site_name" content="Code_dreamer">
+<meta property="og:description" content="Tkinter库学习笔记">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://734432041.github.io/2018/07/07/『小白日记』Tkinter库学习笔记/图片1.png">
+<meta property="og:image" content="https://734432041.github.io/2018/07/07/『小白日记』Tkinter库学习笔记/图片2.png">
+<meta property="og:image" content="https://734432041.github.io/2018/07/07/『小白日记』Tkinter库学习笔记/图片3.png">
+<meta property="og:image" content="https://734432041.github.io/2018/07/07/『小白日记』Tkinter库学习笔记/图片4.png">
+<meta property="og:image" content="https://734432041.github.io/2018/07/07/『小白日记』Tkinter库学习笔记/图片5.png">
+<meta property="og:image" content="https://734432041.github.io/2018/07/07/『小白日记』Tkinter库学习笔记/图片6.png">
+<meta property="og:image" content="https://734432041.github.io/2018/07/07/『小白日记』Tkinter库学习笔记/图片7.png">
+<meta property="og:updated_time" content="2018-07-07T13:39:00.281Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="『小白日记』Tkinter库学习笔记">
+<meta name="twitter:description" content="Tkinter库学习笔记">
+<meta name="twitter:image" content="https://734432041.github.io/2018/07/07/『小白日记』Tkinter库学习笔记/图片1.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Code_dreamer" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="https://734432041.github.io/2018/07/07/『小白日记』Tkinter库学习笔记/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>『小白日记』Tkinter库学习笔记 | Code_dreamer</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <a href="https://https://github.com/734432041" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Code_dreamer</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">Magician</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-schedule">
+    <a href="/schedule/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />日程表</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-commonweal">
+    <a href="/404/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />公益 404</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://734432041.github.io/2018/07/07/『小白日记』Tkinter库学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LiLinfeng">
+      <meta itemprop="description" content="Be a dreamer,but not just a dreamer!">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Code_dreamer">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">『小白日记』Tkinter库学习笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-07-07 14:59:30 / 修改时间：21:39:00" itemprop="dateCreated datePublished" datetime="2018-07-07T14:59:30+08:00">2018-07-07</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Tkinter库学习笔记"><a href="#Tkinter库学习笔记" class="headerlink" title="Tkinter库学习笔记"></a>Tkinter库学习笔记</h1><a id="more"></a>
+<h2 id="Tkinter库简介"><a href="#Tkinter库简介" class="headerlink" title="Tkinter库简介"></a>Tkinter库简介</h2><blockquote>
+<p>Tkinter库是python的标准Tk GUI工具包的接口。<br>Tkinter并不是唯一的python GUI工具包。然而，它是最常用的一种</p>
+</blockquote>
+<h2 id="导入Tkinter库"><a href="#导入Tkinter库" class="headerlink" title="导入Tkinter库"></a>导入Tkinter库</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter</span><br></pre></td></tr></table></figure>
+<h2 id="设置窗口信息"><a href="#设置窗口信息" class="headerlink" title="设置窗口信息"></a>设置窗口信息</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">root = tkinter.Tk()                         <span class="comment">#创建一个窗口</span></span><br><span class="line">root.title(<span class="string">"Message Box!"</span>)                  <span class="comment">#设置窗口的标题</span></span><br><span class="line">root.geometry(<span class="string">'900x500+100+100'</span>)            <span class="comment">#设置窗口的大小和位置</span></span><br><span class="line">root.resizable(width = <span class="keyword">True</span>,height = <span class="keyword">True</span>)  <span class="comment">#设置窗口大小是否能够改变</span></span><br><span class="line"></span><br><span class="line">root.mainloop()                             <span class="comment">#设置窗口消息循环</span></span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong>:  </p>
+<ol>
+<li>geometry的乘号用字母键x，而不是用*</li>
+<li>geometry后面两个数字表示窗口的位置，以左上角为原点，第一个数表示向下的像素的数量，第二个数表示向右的像素的数量</li>
+</ol>
+<p><img src="/2018/07/07/『小白日记』Tkinter库学习笔记/图片1.png" alt=""></p>
+<h2 id="设置控件信息"><a href="#设置控件信息" class="headerlink" title="设置控件信息"></a>设置控件信息</h2><h3 id="Lable控件"><a href="#Lable控件" class="headerlink" title="Lable控件"></a>Lable控件</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lable = tkinter.Label(root,text = <span class="string">"Make a little progress every day!"</span>,bg=<span class="string">"black"</span>,fg=<span class="string">"white"</span>,font=(<span class="string">"黑体"</span>,<span class="number">20</span>),width = <span class="number">50</span>,height = <span class="number">4</span>) </span><br><span class="line"></span><br><span class="line">lable.pack(side = <span class="string">"left"</span>)</span><br></pre></td></tr></table></figure>
+<p>属性：</p>
+<ol>
+<li>text: 要显示的文本信息</li>
+<li>bg: Lable的背景颜色</li>
+<li>fg: 字体的颜色</li>
+<li>font: 字体的信息，大小</li>
+<li>width: Lable的宽度</li>
+<li>height: Lable的高度</li>
+<li>justify: 文字的对齐方式(left,center,right)</li>
+</ol>
+<p><img src="/2018/07/07/『小白日记』Tkinter库学习笔记/图片2.png" alt=""></p>
+<h3 id="Button控件"><a href="#Button控件" class="headerlink" title="Button控件"></a>Button控件</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">myfun</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">global</span> root</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">10</span>):</span><br><span class="line">        L = tkinter.Label(root, text=<span class="string">' '</span>.join(str(i) + <span class="string">'*'</span> + str(j) + <span class="string">'='</span> + str(i * j) <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, i + <span class="number">1</span>)))</span><br><span class="line">        L.pack()</span><br><span class="line"></span><br><span class="line"><span class="comment">#函数方式</span></span><br><span class="line">b1 = tkinter.Button(root,text = <span class="string">"函数方式"</span>,command = myfun)</span><br><span class="line">b1.pack()</span><br><span class="line"><span class="comment">#匿名方式</span></span><br><span class="line">b2 = tkinter.Button(root,text = <span class="string">"匿名函数方式"</span>,command = <span class="keyword">lambda</span>: print(<span class="string">"这是匿名函数的按钮"</span>) )</span><br><span class="line">b2.pack()</span><br><span class="line"><span class="comment">#退出窗口</span></span><br><span class="line">b3 = tkinter.Button(root,text = <span class="string">"退出窗口"</span>,command = root.quit)</span><br><span class="line">b3.pack()</span><br></pre></td></tr></table></figure>
+<p>属性：  </p>
+<ol>
+<li>text: 按钮上要显示的文字信息</li>
+<li>command：按了按扭要执行的代码段</li>
+</ol>
+<p><img src="/2018/07/07/『小白日记』Tkinter库学习笔记/图片3.png" alt=""></p>
+<h3 id="Entry控件"><a href="#Entry控件" class="headerlink" title="Entry控件"></a>Entry控件</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">showInfo</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">global</span> root</span><br><span class="line"></span><br><span class="line">    L = tkinter.Label(root,text = entry.get())</span><br><span class="line">    L.pack()</span><br><span class="line"></span><br><span class="line">entry = tkinter.Entry(root,show = <span class="string">'*'</span>)</span><br><span class="line">entry.pack()</span><br><span class="line"></span><br><span class="line">Btn = tkinter.Button(root,text=<span class="string">"输出输入的内容"</span>,command = showInfo)</span><br><span class="line">Btn.pack()</span><br></pre></td></tr></table></figure>
+<p>属性：</p>
+<ol>
+<li>show: 密文输入，不加show参数时明文输出</li>
+</ol>
+<p><img src="/2018/07/07/『小白日记』Tkinter库学习笔记/图片4.png" alt=""></p>
+<h3 id="Text控件（包括滚动条）"><a href="#Text控件（包括滚动条）" class="headerlink" title="Text控件（包括滚动条）"></a>Text控件（包括滚动条）</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">t = tkinter.Text(root,width = <span class="number">900</span>,height = <span class="number">500</span>)   <span class="comment">#创建一个文本框</span></span><br><span class="line">sc = tkinter.Scrollbar()                        <span class="comment">#滚动条</span></span><br><span class="line"></span><br><span class="line">sc.pack(side = <span class="string">"right"</span>,fill = tkinter.Y)     <span class="comment">#side表示放在窗口的位置，fill表示填充方向</span></span><br><span class="line">t.pack(side = <span class="string">"right"</span>,fill = tkinter.Y)</span><br><span class="line"></span><br><span class="line"><span class="comment">#关联滚动条和文本框</span></span><br><span class="line">sc.config(command = t.yview)</span><br><span class="line">t.config(yscrollcommand = sc.set)</span><br><span class="line"></span><br><span class="line">s = <span class="string">'''</span></span><br><span class="line"><span class="string">这个冬季</span></span><br><span class="line"><span class="string">当熟悉的身影再次映入曼联球迷的眼帘</span></span><br><span class="line"><span class="string">当熟悉的身影向着本方腹地发起攻击</span></span><br><span class="line"><span class="string">爱恨交织的红魔也许很难理清这份复杂的心绪</span></span><br><span class="line"><span class="string">毕竟</span></span><br><span class="line"><span class="string">他曾是老特拉福德的天才七号</span></span><br><span class="line"><span class="string">是他们引以为傲的天之骄子</span></span><br><span class="line"><span class="string">他是天使，亦是魔鬼</span></span><br><span class="line"><span class="string">他是情人，也是敌人</span></span><br><span class="line"><span class="string">他年少成名，天赋过人</span></span><br><span class="line"><span class="string">他性格火爆，桀骜不驯</span></span><br><span class="line"><span class="string">他流着红色的血液，却拥有白色的灵魂</span></span><br><span class="line"><span class="string">他拥有王子的气质，却迷恋浪子的留情</span></span><br><span class="line"><span class="string">有多少人爱他就有多少人恨他</span></span><br><span class="line"><span class="string">在鲜明的爱恨情仇中，克里斯蒂亚诺 罗纳尔多依然华丽无比。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">每分每秒</span></span><br><span class="line"><span class="string">世界的每一个角落都有足球少年的诞生与成长</span></span><br><span class="line"><span class="string">克里斯蒂亚诺罗纳尔多出生自大西洋上的美丽海盗 马德拉岛</span></span><br><span class="line"><span class="string">他的父亲是美国前总统罗纳德里根的崇拜者</span></span><br><span class="line"><span class="string">因此把罗纳德的名字葡语话后就是罗纳尔多</span></span><br><span class="line"><span class="string">也就是今天这个响彻世界足坛的名字</span></span><br><span class="line"><span class="string">从里斯本的追风少年</span></span><br><span class="line"><span class="string">到梦剧场的王子</span></span><br><span class="line"><span class="string">如今他已是伯纳乌的国王</span></span><br><span class="line"><span class="string">炫目的球技和俊朗的外形</span></span><br><span class="line"><span class="string">让克里斯蒂亚诺罗纳尔多注定要成为一代天之骄子</span></span><br><span class="line"><span class="string">他的速度和爆发力</span></span><br><span class="line"><span class="string">他的冷静和从容</span></span><br><span class="line"><span class="string">他的过人和转身</span></span><br><span class="line"><span class="string">他的射门和盘带</span></span><br><span class="line"><span class="string">还有他的体力</span></span><br><span class="line"><span class="string">他的左右脚</span></span><br><span class="line"><span class="string">他的准确 精准</span></span><br><span class="line"><span class="string">他的效率</span></span><br><span class="line"><span class="string">种种特点 让他成为了这个无法复制的克里斯蒂亚诺罗纳尔多</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">我们常常怀念过去的故事 不是因为那些日子比现在美好</span></span><br><span class="line"><span class="string">而是它们是生命值得尊敬的一部分 且再也无法回去</span></span><br><span class="line"><span class="string">2003年8月8日</span></span><br><span class="line"><span class="string">c罗以1224万英镑空降曼彻斯特</span></span><br><span class="line"><span class="string">一个不经意的开始 却成为他巨星道路上重要的转折</span></span><br><span class="line"><span class="string">十八岁的c罗，带着满脸稚气初登梦剧场的舞台</span></span><br><span class="line"><span class="string">在签约仪式后主教练弗格森将七号战袍授予了他</span></span><br><span class="line"><span class="string">七，是多么传奇的数字</span></span><br><span class="line"><span class="string">在过去的半个世纪里，曼联最成功的球星几乎都身披七号</span></span><br><span class="line"><span class="string">乔治·贝斯特，罗布森 ，坎通纳，贝克汉姆</span></span><br><span class="line"><span class="string">一个个如雷贯耳的大名</span></span><br><span class="line"><span class="string">如今c罗成为了他新的主人</span></span><br><span class="line"><span class="string">七号的责任与荣耀在等待他去传承</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line">t.insert(tkinter.INSERT, s)</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/07/07/『小白日记』Tkinter库学习笔记/图片5.png" alt=""></p>
+<h3 id="RadioButton"><a href="#RadioButton" class="headerlink" title="RadioButton"></a>RadioButton</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">myfun2</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">global</span> v</span><br><span class="line"></span><br><span class="line">    message = <span class="string">""</span></span><br><span class="line">    <span class="keyword">if</span> v.get() == <span class="number">1</span>:</span><br><span class="line">        message += <span class="string">"I love apple!\n"</span></span><br><span class="line">    <span class="keyword">elif</span> v.get() == <span class="number">2</span>:</span><br><span class="line">        message += <span class="string">"I love orange!\n"</span></span><br><span class="line"></span><br><span class="line">    t.delete(<span class="number">0.0</span>,tkinter.END)</span><br><span class="line">    t.insert(tkinter.INSERT,message)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">v = tkinter.IntVar()                  <span class="comment">#设置一个变量表示选择的项目</span></span><br><span class="line"></span><br><span class="line">r1 = tkinter.Radiobutton(root,text = <span class="string">"apple"</span>,value = <span class="number">1</span>,variable = v,command = myfun2)</span><br><span class="line">r1.pack()</span><br><span class="line"></span><br><span class="line">r2 = tkinter.Radiobutton(root,text = <span class="string">"orange"</span>,value = <span class="number">2</span>,variable = v,command = myfun2)</span><br><span class="line">r2.pack()</span><br><span class="line"></span><br><span class="line">t = tkinter.Text(root,width = <span class="number">900</span>,height = <span class="number">100</span>)</span><br><span class="line">t.pack()</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/07/07/『小白日记』Tkinter库学习笔记/图片6.png" alt=""></p>
+<h3 id="Checkbutton"><a href="#Checkbutton" class="headerlink" title="Checkbutton"></a>Checkbutton</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">myfun1</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">global</span> Var1,Var2,Var3,t</span><br><span class="line"></span><br><span class="line">    message = <span class="string">""</span></span><br><span class="line">    <span class="keyword">if</span> Var1.get() <span class="keyword">is</span> <span class="keyword">True</span>:</span><br><span class="line">        message += <span class="string">"first\n"</span></span><br><span class="line">    <span class="keyword">if</span> Var2.get() <span class="keyword">is</span> <span class="keyword">True</span>:</span><br><span class="line">        message += <span class="string">"second\n"</span></span><br><span class="line">    <span class="keyword">if</span> Var3.get() <span class="keyword">is</span> <span class="keyword">True</span>:</span><br><span class="line">        message += <span class="string">"third\n"</span></span><br><span class="line"></span><br><span class="line">    t.delete(<span class="number">0.0</span>, tkinter.END)          <span class="comment">#清除text中的内容</span></span><br><span class="line">    t.insert(tkinter.INSERT, message)   <span class="comment">#向text中添加模板</span></span><br><span class="line"></span><br><span class="line">Var1 = tkinter.BooleanVar()</span><br><span class="line">c1 = tkinter.Checkbutton(root,text = <span class="string">"1"</span>,variable = Var1,command = myfun1)</span><br><span class="line">c1.pack()</span><br><span class="line"></span><br><span class="line">Var2 = tkinter.BooleanVar()</span><br><span class="line">c2 = tkinter.Checkbutton(root,text = <span class="string">"2"</span>,variable = Var2,command = myfun1)</span><br><span class="line">c2.pack()</span><br><span class="line"></span><br><span class="line">Var3 = tkinter.BooleanVar()</span><br><span class="line">c3 = tkinter.Checkbutton(root,text = <span class="string">"3"</span>,variable = Var3,command = myfun1)</span><br><span class="line">c3.pack()</span><br><span class="line"></span><br><span class="line">t = tkinter.Text(root,width = <span class="number">900</span>,height = <span class="number">100</span>)</span><br><span class="line">t.pack()</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/07/07/『小白日记』Tkinter库学习笔记/图片7.png" alt=""></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="LiLinfeng 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="LiLinfeng 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <div>
+  		
+   			<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:8px;">-------------本文到此结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  		
+	</div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
+          
+            <a href="/tags/学习笔记/" rel="tag"><i class="fa fa-tag"></i> 学习笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/19/操作系统复习/" rel="next" title="操作系统复习">
+                <i class="fa fa-chevron-left"></i> 操作系统复习
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+ 	<div id="gitalk-container"></div>
+
+
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="LiLinfeng" />
+            
+              <p class="site-author-name" itemprop="name">LiLinfeng</p>
+              <p class="site-description motion-element" itemprop="description">Be a dreamer,but not just a dreamer!</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/734432041" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:734432041@qq.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Tkinter库学习笔记"><span class="nav-number">1.</span> <span class="nav-text">Tkinter库学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Tkinter库简介"><span class="nav-number">1.1.</span> <span class="nav-text">Tkinter库简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导入Tkinter库"><span class="nav-number">1.2.</span> <span class="nav-text">导入Tkinter库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置窗口信息"><span class="nav-number">1.3.</span> <span class="nav-text">设置窗口信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置控件信息"><span class="nav-number">1.4.</span> <span class="nav-text">设置控件信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lable控件"><span class="nav-number">1.4.1.</span> <span class="nav-text">Lable控件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Button控件"><span class="nav-number">1.4.2.</span> <span class="nav-text">Button控件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Entry控件"><span class="nav-number">1.4.3.</span> <span class="nav-text">Entry控件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Text控件（包括滚动条）"><span class="nav-number">1.4.4.</span> <span class="nav-text">Text控件（包括滚动条）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RadioButton"><span class="nav-number">1.4.5.</span> <span class="nav-text">RadioButton</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Checkbutton"><span class="nav-number">1.4.6.</span> <span class="nav-text">Checkbutton</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="piggy-bank"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LiLinfeng</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <!-- <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.3.0</div>
+-->
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '556020ae595df9eadeeb',
+          clientSecret: '3a68e1cf6857aa7ab6d96c15d3af4d35a8c220f7',
+          repo: '734432041.github.io',
+          owner: '734432041',
+          admin: ['734432041'],
+          id: '<%= page.title %>',
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+</body>
+</html>
